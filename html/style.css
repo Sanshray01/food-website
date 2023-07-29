@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,500;0,600;0,800;1,100;1,200;1,300;1,500;1,600;1,900&display=swap');
+*,
+*::after,
+*::before{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.navbar .hamber-lines{
+    display:none;
+}
+input{
+    display: none;
+}
+.navbar-container{
+   display: flex;
+   justify-content: space-around;
+   height:64px;
+   align-items: center;
+   z-index: 1;
+}
+.navbar{
+    box-shadow: 0px 5px 10px 0px #aaa;
+    background-color: #fff;
+    position:fixed;
+    width:100%;
+    color: #000;
+    z-index: 999;
+    opacity: 0.85;
+}
+.menu-items{
+    list-style: none;
+    font-size: 140%;
+    display: flex;
+    justify-content: space-around;
+    width: 500px;
+    z-index: 1;
+}
+.navbar a{
+    text-decoration: none;
+    color: #000000e0;
+    transition: color 0.3s ease-in-out;
+    z-index: 1;
+}
+.logo{
+    font-size: 3rem;
+}
+.navbar a:hover{
+    color: rgb(64, 64, 225);
+}
+.one{
+    align-items: center;
+    width: 100%;
+    height:50vh;
+    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) ,url("./img/pexels-robin-stickel-70497.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: darken;
+}
+.one h1{
+    text-align: center;
+    padding-top: 12%;
+    font-size: 280%;
+   color: #fff;
+}
+.one p{
+    text-align: center;
+    padding-top: 1%;
+    font-size: 150%;
+    color: #fff;
+}
+
+.one a{
+    text-align: center;
+    display: inline-block;
+   padding: 1% 2%;
+    font-size: 150%;
+    margin-left: 46.5%;
+    margin-top: 1%;
+    background-color:rgb(42, 165, 163);
+    color: #fff;
+    text-decoration: none;
+    box-shadow: none;
+    border-radius: 30%;
+    font-weight: 500;   
+}
+.about{
+    padding: 50px 0px;
+    background: #f5f5f7;
+}
+.about-wrapper{
+    display: flex;
+}
+.about h2{
+    font-size: 3.2rem;
+}
+.about p{
+    font-size: 1.6rem;
+    color: #555;
+    
+}
+.about .small{
+    font-size: 1.6rem;
+    color: #666;
+    font-weight: 600;
+}
+.about-img{
+    flex: 1 1 400px;
+    padding: 30px;
+
+}
+.about-text{
+    flex: 1 1 400px;
+    padding: 30px;
+    margin: auto;
+    transform: translateX(-150%);
+    margin-right: 5%;
+    margin-left: 15%;
+    animation: about-text-animation 1s ease-in-out forwards;
+}
+@keyframes about-text-animation{
+    100%{
+        transform: translate(0);
+    }
+}
+
+.about-img img{
+    display: block;
+    height: 400px;
+    max-width: 100%;
+    margin: auto;
+    object-fit: cover;
+    object-position: left;
+    margin-right: 40%;
+}
+#food p{
+    text-align: center;
+    font-size: 250%;
+    padding: 4% 0%;
+    font-weight: 700;
+    
+}
+.food-container{
+    display: flex;
+    justify-content: space-between;
+}
+.food-container img{
+    display: block;
+    width: 100%;
+    margin: auto;
+    max-height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+#food h3{
+    text-align: center;
+    font-size: 250%;
+    font-weight: 700;
+    color: #fff;
+}
+.img-container{
+    margin: 0 1rem;
+    position: relative;
+}
+#food a{
+    margin-left: 35%;
+    font-size: 200%;
+    background-color: rgb(0, 179, 255);
+    border-radius: 20%;
+    text-decoration: none;
+    color: #fff;
+    padding: 4px 7px;
+}
+.img-content{
+    position: absolute;
+    top:70%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    z-index: 2;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.3s ease-in-out 0.1s;
+}
+.img-container::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top:0;
+    left: 0;
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.871);
+    opacity: 0;
+    z-index: 1;
+    transform: scaleY(0);
+    transform-origin: 100% 100%;
+    transition: all 0.3s ease-in-out;
+}
+.img-container:hover::after{
+    opacity: 1;
+    transform: scaleY(1);
+}
+.img-container:hover .img-content{
+    opacity: 1;
+    top:40%;
+}
+.food-menu .fighter{
+    text-align: center;
+    font-size: 300%;
+    padding: 4% 0%;
+    font-weight: 700;
+    margin-top: 10%;
+    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) ,url("./img/food.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: darken;
+    color: #fff;
+    width: 80%;
+    margin-left: 10%;
+    
+}
+.food-container1{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px 0px 30px 0px;
+
+}
+.food-menu-items{
+    display: flex;
+    margin-left: 10%;
+    margin-top: 5%;
+    align-items: center;
+}
+.red{
+    margin-left: 4%;
+}
+.food-container1 img{
+    display: block;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+.food-menu-items .food-title{
+    font-weight: 800;
+    color: rgb(77, 2, 2);
+    font-size: 200%;
+    padding-left: 1%;
+
+}
+.food-price{
+    font-size: 170%;
+    font-weight: 600;
+    color: rgb(42, 165, 163);
+}
+.food-menu-items .aap{
+    font-size: 130%;
+}
+.testimonial{
+    background: rgb(243,243,243);
+}
+.testimonial-container{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px 0px 30px 0px;
+    justify-content: space-around;
+  
+}
+
+.testimonial-content img{
+    
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    
+    transform: translateX(50%);
+}
+.testimonial-title{
+    text-align: center;
+    font-size: 250%;
+    padding: 4% 0%;
+    font-weight: 700;
+    margin-top: 5%;
+}
+.testimonial-decoration{
+
+    position: absolute;
+    color: rgb(255, 204, 0);
+    transform: translateY(-150%);
+}
+.ice{
+    margin-right: 74%;
+    
+}
+.water{
+    margin-left: 60.5%;
+}
+.gun{
+    margin-right: 4%;
+}
+.testimonial-thoughts{
+    font-size: 150%;
+    font-weight: 500;
+    padding-bottom: 2%; 
+    margin-bottom: 2%;
+}
+.girl{
+    margin-left: 12%;
+}
+.testimonial-name{
+    
+    font-size: 150%;
+    font-weight: 700;
+    text-align: center;
+    width: 85%;
+}
+.contact{
+    background-color: #ede7e7;
+}
+.contact-container{
+    display: flex;
+}
+.contact-img img{
+    width: 500px;
+    height: 400px;
+    padding-top:25px ;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    margin-left: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+.contact-form1{
+    margin-left: 17%;
+    background-color: #fff;
+    margin-top: 1.7%;
+    margin-bottom: 0.6%;
+    width: 400px;
+}
+.busy{
+    font-size: 200%;
+    color: #555;
+}
+.form input{
+    padding: 0.5rem;
+    width:70%;
+    display: block;
+    margin-top: 3%;
+}
+.wah{
+    border-bottom: 2px solid  rgb(28, 28, 50);
+   
+    width:70%;
+
+    color: brown;
+    font-size: xx-large;
+}
+.wah3{
+    margin-top: 5%;
+    font-size: 150%;
+    margin-bottom: 3%;
+}
+.wah4 .games123{
+    display: block;
+}
+.wah4 label{
+    font-size: 140%;
+}
+.wah4 textarea{
+    display: block;
+    padding: 4%;
+    width: 70%;
+    height: 4rem;
+}
+.wah5{
+    margin-top: 3%;
+    padding: 3% 4%;
+    background-color: rgb(42, 165, 163);
+    color: white;
+    border-radius: 10%;
+}
+.wah4, .wah5{
+    margin-left: 1%;
+}
+#footer h2{
+    text-align: center;
+    font-size: 2rem;
+    padding: 1rem;
+    font-weight: 500;
+    color: #fff;
+    background-color: rgb(65, 65, 65);
+}
